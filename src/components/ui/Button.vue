@@ -37,6 +37,10 @@ const props = defineProps({
       border-radius: calc($height / 2);
     }
 
+    &_outline {
+      background-color: transparrent;
+    }
+
     &:enabled:hover,
     &:enabled:focus {
       background-color: var(--color-primary-hover);
