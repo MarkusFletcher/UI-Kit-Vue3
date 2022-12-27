@@ -21,7 +21,7 @@ const links = ref([
 </script>
 
 <template>
-  <aside class="sidebar" :class="{sidebar_isopen: isOpen}">
+  <aside :class="['sidebar',{sidebar_isopen: isOpen}]">
     <router-link class="sidebar__link" v-for="link in links" :key="link.name" :to="link.href">
       {{ link.name }}
     </router-link>
