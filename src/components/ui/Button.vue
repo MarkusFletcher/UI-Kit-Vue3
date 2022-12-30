@@ -7,7 +7,7 @@ const props = defineProps({
     required: false,
     default: 'default'
   },
-  outline: {
+  outlined: {
     type: String,
     required: false
   },
@@ -19,7 +19,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <button :class="['btn', {btn_rounded: rounded}, {btn_outline: outline}, `btn_${color}`]">
+  <button :class="['btn', {btn_rounded: rounded}, {btn_outlined: outlined}, `btn_${color}`]">
     <slot></slot>
   </button>
 </template>
@@ -57,11 +57,55 @@ const props = defineProps({
       }
     }
 
+    &_success {
+      background-color: var(--color-success);
+      border-color: var(--color-success);
+
+      &:enabled:hover,
+      &:enabled:focus {
+        background-color: var(--color-success-hover);
+        border-color: var(--color-success-hover);
+      }
+    }
+
+    &_info {
+      background-color: var(--color-info);
+      border-color: var(--color-info);
+
+      &:enabled:hover,
+      &:enabled:focus {
+        background-color: var(--color-info-hover);
+        border-color: var(--color-info-hover);
+      }
+    }
+
+    &_warning {
+      background-color: var(--color-warning);
+      border-color: var(--color-warning);
+
+      &:enabled:hover,
+      &:enabled:focus {
+        background-color: var(--color-warning-hover);
+        border-color: var(--color-warning-hover);
+      }
+    }
+
+    &_danger {
+      background-color: var(--color-danger);
+      border-color: var(--color-danger);
+
+      &:enabled:hover,
+      &:enabled:focus {
+        background-color: var(--color-danger-hover);
+        border-color: var(--color-danger-hover);
+      }
+    }
+
     &_rounded {
       border-radius: calc($height / 2);
     }
 
-    &_outline {
+    &_outlined {
       background-color: transparent;
       color: #333;
 
