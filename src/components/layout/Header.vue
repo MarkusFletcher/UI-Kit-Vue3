@@ -10,7 +10,6 @@
 <style lang="scss" scoped>
   .header {
     background-color: #fff;
-    font-weight: bold;
     padding: 0 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
     height: 62px;

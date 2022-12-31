@@ -28,6 +28,7 @@ const props = defineProps({
   .btn {
     $height: 36px;
 
+    font-family: inherit;
     font-size: 16px;
     color: #fff;
     cursor: pointer;

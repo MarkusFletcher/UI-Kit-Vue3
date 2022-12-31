@@ -50,7 +50,6 @@ const links = ref([
       display: block;
       padding: 12px 24px;
       transition: .2s;
-      font-weight: bold;
       &:hover {
         background-color: var(--color-primary);
         color: #fff;
