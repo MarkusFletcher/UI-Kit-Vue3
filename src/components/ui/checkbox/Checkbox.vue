@@ -1,5 +1,5 @@
 <script setup>
-const emits = defineEmits(['update: checked'])
+const emits = defineEmits(['change'])
 
 const props = defineProps({
   name: {
@@ -29,7 +29,8 @@ const props = defineProps({
 })
 
 const handleClick = (e) => {
-  console.log(e)
+  emits('change', e)
+  // console.log(e)
 }
 </script>
 
@@ -42,7 +43,9 @@ const handleClick = (e) => {
     :checked="checked"
     :disabled="disabled"
     :required="required"
-    @input="handleClick($event)">
+    @input="handleClick"
+    >
+    <!-- @input="handleClick($event)" -->
   <label :for="id">
     <slot></slot>
   </label>
