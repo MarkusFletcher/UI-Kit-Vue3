@@ -44,4 +44,8 @@ a:focus {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+
+  &_block {
+    display: block;
+  }
 }
