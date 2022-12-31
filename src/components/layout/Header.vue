@@ -3,7 +3,7 @@
       <button class="header__togle-menu-btn" @click="$emit('togglemenu')">
         <img src="@/assets/burger.svg" alt="">
       </button>
-      <router-link to="/">UI KIT (Vue 3 + Composition API + Vite)</router-link>
+      <router-link class="header__link" to="/">UI KIT (Vue 3 + Composition API + Vite)</router-link>
   </header>
 </template>
 
@@ -26,6 +26,14 @@
       margin-right: 30px;
       display: flex;
       align-items: center;
+    }
+
+    &__link {
+      transition: .2s;
+      &:hover,
+      &:focus {
+        color: var(--color-primary-hover);
+      }
     }
   }
 </style>
