@@ -16,13 +16,17 @@ const links = ref([
   {
     name: 'Button',
     href: '/button'
+  },
+  {
+    name: 'Checkbox',
+    href: '/checkbox'
   }
 ])
 </script>
 
 <template>
   <aside :class="['sidebar',{sidebar_isopen: isOpen}]">
-    <router-link class="sidebar__link" v-for="link in links" :key="link.name" :to="link.href">
+    <router-link class="sidebar__link" active-class="sidebar__link_active" v-for="link in links" :key="link.name" :to="link.href">
       {{ link.name }}
     </router-link>
   </aside>
@@ -36,7 +40,6 @@ const links = ref([
     background-color: #fff;
     width: 250px;
     height: 100%;
-    padding: 20px;
     transition: .2s;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
     transform: translateX(-250px);
@@ -45,14 +48,16 @@ const links = ref([
     }
     &__link {
       display: block;
-      border-radius: 12px;
-      padding: 10px;
-      border: 2px solid #fff;
+      padding: 12px 24px;
       transition: .2s;
       font-weight: bold;
-      margin-bottom: 10px;
       &:hover {
-        border-color: var(--primary-color);
+        background-color: var(--color-primary);
+        color: #fff;
+      }
+      &_active {
+        background-color: var(--color-primary);
+        color: #fff;
       }
     }
   }
