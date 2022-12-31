@@ -51,7 +51,5 @@ const clickOnButton = () => {
 </template>
 
 <style lang="scss" scoped>
-  .row {
-    margin-bottom: 20px;
-  }
+  
 </style>

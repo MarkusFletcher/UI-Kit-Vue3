@@ -38,3 +38,10 @@ a:hover,
 a:focus {
   // color: var(--color-primary-hover);
 }
+
+.row {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}

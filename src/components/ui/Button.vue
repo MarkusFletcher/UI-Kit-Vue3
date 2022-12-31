@@ -38,8 +38,6 @@ const props = defineProps({
     border: 2px solid var(--color-primary);
     transition: .2s;
 
-    margin-right: 20px;
-
     &:enabled:hover,
     &:enabled:focus {
       background-color: var(--color-primary-hover);
