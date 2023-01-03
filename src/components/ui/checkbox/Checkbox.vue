@@ -30,28 +30,31 @@ const props = defineProps({
 
 const handleClick = (e) => {
   emits('change', e)
-  // console.log(e)
 }
 </script>
 
 <template>
-  <input
-    class="checkbox"
-    type="checkbox"
-    :id="id"
-    :value="value"
-    :checked="checked"
-    :disabled="disabled"
-    :required="required"
-    @input="handleClick"
-    >
-    <!-- @input="handleClick($event)" -->
-  <label :for="id">
-    <slot></slot>
-  </label>
+  <div class="checkbox-wrap">
+    <input
+      class="checkbox"
+      type="checkbox"
+      :id="id"
+      :name="name"
+      :value="value"
+      :checked="checked"
+      :disabled="disabled"
+      :required="required"
+      @input="handleClick">
+    <label :for="id">
+      <slot></slot>
+    </label>
+  </div>
 </template>
 
 <style lang="scss">
+  .checkbox-wrap {
+    display: block;
+  }
   .checkbox {
     position: absolute; // take it out of document flow
     opacity: 0; // hide it
